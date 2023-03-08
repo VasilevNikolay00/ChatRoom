@@ -1,4 +1,4 @@
-import multiprocessing
+import threading
 import time, socket
 from dataclasses import dataclass
 
@@ -53,8 +53,8 @@ def message_receiver():
             last_message = message
 
 
-t1 = multiprocessing.Process(target=client_adder)
-t2 = multiprocessing.Process(target=message_receiver)
+t1 = threading.Thread(target=client_adder)
+t2 = threading.Thread(target=message_receiver)
 
 t1.start()
 t2.start()
