@@ -4,7 +4,7 @@ import time, socket, sys
 socket_server = socket.socket()
 server_host = socket.gethostname()
 ip = socket.gethostbyname(server_host)
-sport = 14967
+sport = 14968
 
 print('This is your IP address: ', ip)
 server_host = input('Enter friend\'s IP address:')
